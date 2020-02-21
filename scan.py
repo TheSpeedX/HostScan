@@ -40,7 +40,7 @@ else:
 	l=f.read().split('\n')
 	f.close()
 	for ipi in l:
-		if len(ipi)<5:
+		if len(ipi)<5 or "," in ipi:
 			continue
 		if "/" in ipi:
 			ip_list+=[str(ip) for ip in ipaddress.IPv4Network(ipi)]
