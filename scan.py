@@ -37,7 +37,7 @@ if ipi.count(".")==3:
 		ip_list.append(ipi)
 else:
 	f=open(ipi)
-	l=f.read()
+	l=f.read().split('\n')
 	f.close()
 	for ipi in l:
 		if len(ipi)<5:
